@@ -4,7 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css" />
     <script src="jquery-1.8.2.min.js" type="text/javascript"></script>
-    <script src="fancybox/jquery.fancybox.js?v=1" type="text/javascript"></script>
     <script src="fancybox/jquery.fancybox.pack.js?v=1" type="text/javascript"></script>
 
     <script type="text/javascript">
@@ -12,12 +11,14 @@
         $(document).ready(function() {
             
             $(".fancybox").attr('rel', 'gallery').fancybox({
-              openEffect  : 'none',
-              closeEffect : 'none', 
-              nextEffect :'fade',
-              prevEffect:'fade',
+              //设置相应事件（左边从上到下依次是打开、关闭、下一个、上一个）的动画效果。可选 'elastic'、 'fade' 或 'none'。
+              openEffect  : 'elastic',
+              closeEffect : 'elastic', 
+              nextEffect :'elastic',
+              prevEffect:'elastic',
               maxWidth:1280,
-              helpers:{ 
+              helpers:{
+              	//图片标题的显示方式
                 title: { type:'inside' } ,
                  overlay : {
                     css : {
@@ -37,11 +38,11 @@
 <body>
     <h4>1、图片标题内嵌，并且可以点击 2、显示总图片数和当前数</h4>
     <p>
-        <a class="fancybox" rel="group" data-fancybox-group="button" href="http://ww3.sinaimg.cn/mw690/3cefded1gw1eyl1p21s81j20xa0mctjo.jpg" title="在桂林1">
+        <a class="fancybox" rel="group"  href="http://ww3.sinaimg.cn/mw690/3cefded1gw1eyl1p21s81j20xa0mctjo.jpg" title="在桂林1">
             
             <img src="http://ww3.sinaimg.cn/mw690/3cefded1gw1eyl1p21s81j20xa0mctjo.jpg"  style="width:100px;height:80px"/>
         </a>
-       <a class="fancybox" rel="group" data-fancybox-group="button" href="http://ww2.sinaimg.cn/mw690/3cefded1gw1eyl1y8955tj20xa0lyq9q.jpg" title="在桂林2">
+       <a class="fancybox" rel="group"  href="http://ww2.sinaimg.cn/mw690/3cefded1gw1eyl1y8955tj20xa0lyq9q.jpg" title="在桂林2">
             
             <img src="http://ww2.sinaimg.cn/mw690/3cefded1gw1eyl1y8955tj20xa0lyq9q.jpg"  style="width:100px;height:80px"/>
         </a>
